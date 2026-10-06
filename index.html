@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brandly — Responsive Navbar Demo</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__brand">Brandly</a>
+
+      <nav class="navbar__nav" aria-label="Primary">
+        <a href="#home" class="nav-link" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+
+        <div class="nav-dropdown" id="navDropdown">
+          <button type="button" class="nav-link nav-dropdown__trigger" id="dropdownTrigger" aria-expanded="false">
+            Services
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown__menu" id="dropdownMenu">
+            <a href="#web">Web Design</a>
+            <a href="#dev">Development</a>
+            <a href="#seo">SEO &amp; Growth</a>
+          </div>
+        </div>
+
+        <a href="#pricing" class="nav-link" data-section="pricing">Pricing</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="navbar__cta">Get Started</a>
+
+      <button type="button" class="navbar__toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link" data-section="home">Home</a>
+      <a href="#about" class="mobile-link" data-section="about">About</a>
+      <a href="#web" class="mobile-link">Web Design</a>
+      <a href="#dev" class="mobile-link">Development</a>
+      <a href="#seo" class="mobile-link">SEO &amp; Growth</a>
+      <a href="#pricing" class="mobile-link" data-section="pricing">Pricing</a>
+      <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+      <a href="#contact" class="mobile-cta">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section section--hero">
+      <h1>Build things people actually want to use.</h1>
+      <p>Scroll down to see the navbar react &mdash; it picks up a shadow once you leave the top, and the active link updates as each section comes into view.</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>This is placeholder content so the navbar has somewhere to point to. Resize the window below 860px to see the layout switch to the mobile hamburger menu.</p>
+    </section>
+
+    <section id="web" class="section">
+      <h2>Web Design</h2>
+      <p>One of the dropdown's sub-items, in case you followed the Services menu here.</p>
+    </section>
+
+    <section id="dev" class="section">
+      <h2>Development</h2>
+      <p>Another dropdown destination, just to demonstrate the submenu actually links somewhere.</p>
+    </section>
+
+    <section id="seo" class="section">
+      <h2>SEO &amp; Growth</h2>
+      <p>The last of the Services dropdown links.</p>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2>Pricing</h2>
+      <p>Plans would go here. This is a navbar demo, not a pricing page — but the section exists so scroll-spy has something to highlight.</p>
+    </section>
+
+    <section id="contact" class="section section--last">
+      <h2>Contact</h2>
+      <p>Reach the end of the page and the "Contact" link should be the one highlighted in the nav.</p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
